@@ -27,7 +27,7 @@ int main(){
     int y = 25;
 
     std::random_device dev;
-    std::uniform_int_distribution<uint8_t> nd(0,4);
+    std::uniform_int_distribution<uint8_t> nd(0,3);
 
 
     bool isRunning = true;
@@ -49,7 +49,25 @@ int main(){
 
         switch(dir){
 
+          
             case 0:
+                x += 1;
+                break;
+            
+            case 1:
+                x -= 1;
+                break;
+
+            case 2:
+                y += 1;
+                break;
+
+            case 3:
+                y -= 1;
+                break;
+
+            /**
+             *   case 0:
                 x -= 1;
                 y -= 1;
                 break;
@@ -68,6 +86,8 @@ int main(){
                 x += 1;
                 y += 1;
                 break;
+             * 
+             */
 
             default:
                 break;

@@ -9,6 +9,8 @@ Contains a function to create a map randomly for a platformer game moving from r
 
 int main(){
 
+    // set the floor and cieling y value
+
     return 0;
 }
 

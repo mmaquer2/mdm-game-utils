@@ -14,20 +14,12 @@ int const ROOM_NUMBER = 5;
 
 int create_roooms(){
 
-
+    return 0;
 }
 
 
 int main(){
 
-
-    // declare room graph 
-
-    // rooms are nodes 
-
-    // the path between rooms are edges
-
-   
     
     SDL_Init(SDL_INIT_EVERYTHING);
 
@@ -38,6 +30,14 @@ int main(){
         SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+    //SDL_RenderSetScale(renderer,20,20);
+
+    // declare room graph 
+
+    // rooms are nodes 
+
+    // the path between rooms are edges
    
     //vector<int> room_data = new vector();
 
@@ -56,7 +56,12 @@ int main(){
 
         // get the instructions to draw each room
 
-        
+        SDL_Rect rect;
+        rect.x = 25;
+        rect.y = 25;
+        rect.w = 200;
+        rect.h = 200;
+
 
         // draw the outline of each room
 
@@ -64,7 +69,13 @@ int main(){
 
 
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-       SDL_RenderDrawPoint(renderer, x, y);
+
+        SDL_RenderDrawRect(renderer, &rect);
+
+        //SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+
+        //SDL_RenderDrawPoint(renderer, x, y);
+
         SDL_RenderPresent(renderer);
 
     }
